@@ -3,6 +3,7 @@
 package sdk
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"time"
@@ -41,7 +42,7 @@ func Float64(f float64) *float64 { return &f }
 type sdkConfiguration struct {
 	DefaultClient     HTTPClient
 	SecurityClient    HTTPClient
-	Security          *shared.Security
+	Security          func(context.Context) (interface{}, error)
 	ServerURL         string
 	ServerIndex       int
 	Language          string
@@ -49,6 +50,7 @@ type sdkConfiguration struct {
 	SDKVersion        string
 	GenVersion        string
 	UserAgent         string
+	RetryConfig       *utils.RetryConfig
 }
 
 func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
@@ -60,6 +62,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 }
 
 // Twst - Hashicups: Example Hashicups through Speakeasy
+//
 // https://docs.speakeasyapi.dev - The Speakeasy Platform Documentation
 type Twst struct {
 	Order *order
@@ -105,10 +108,31 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
+func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
+	return func(context.Context) (interface{}, error) {
+		return &security, nil
+	}
+}
+
 // WithSecurity configures the SDK to use the provided security details
 func WithSecurity(security shared.Security) SDKOption {
 	return func(sdk *Twst) {
-		sdk.sdkConfiguration.Security = &security
+		sdk.sdkConfiguration.Security = withSecurity(security)
+	}
+}
+
+// WithSecuritySource configures the SDK to invoke the Security Source function on each method call to determine authentication
+func WithSecuritySource(security func(context.Context) (shared.Security, error)) SDKOption {
+	return func(sdk *Twst) {
+		sdk.sdkConfiguration.Security = func(ctx context.Context) (interface{}, error) {
+			return security(ctx)
+		}
+	}
+}
+
+func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
+	return func(sdk *Twst) {
+		sdk.sdkConfiguration.RetryConfig = &retryConfig
 	}
 }
 
@@ -116,11 +140,11 @@ func WithSecurity(security shared.Security) SDKOption {
 func New(opts ...SDKOption) *Twst {
 	sdk := &Twst{
 		sdkConfiguration: sdkConfiguration{
-			Language:          "terraform",
+			Language:          "go",
 			OpenAPIDocVersion: "0.0.1",
-			SDKVersion:        "0.1.0",
-			GenVersion:        "2.151.2",
-			UserAgent:         "speakeasy-sdk/terraform 0.1.0 2.151.2 0.0.1 twst",
+			SDKVersion:        "0.2.0",
+			GenVersion:        "2.173.0",
+			UserAgent:         "speakeasy-sdk/go 0.2.0 2.173.0 0.0.1 twst",
 		},
 	}
 	for _, opt := range opts {

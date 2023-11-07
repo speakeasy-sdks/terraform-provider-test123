@@ -65,7 +65,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 //
 // https://docs.speakeasyapi.dev - The Speakeasy Platform Documentation
 type Twst struct {
-	Order *order
+	Order *Order
 
 	sdkConfiguration sdkConfiguration
 }
@@ -142,9 +142,9 @@ func New(opts ...SDKOption) *Twst {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.1",
-			SDKVersion:        "0.2.0",
-			GenVersion:        "2.173.0",
-			UserAgent:         "speakeasy-sdk/go 0.2.0 2.173.0 0.0.1 twst",
+			SDKVersion:        "0.3.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.3.0 2.181.1 0.0.1 twst",
 		},
 	}
 	for _, opt := range opts {

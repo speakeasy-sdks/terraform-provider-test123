@@ -71,7 +71,7 @@ terraform {
   required_providers {
     twst = {
       source  = "test/twst"
-      version = "0.2.0"
+      version = "0.3.0"
     }
   }
 }
@@ -111,8 +111,6 @@ TF_REATTACH_PROVIDERS=... terraform apply
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

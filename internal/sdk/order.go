@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/operations"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/sdkerrors"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/utils"
 	"io"
 	"net/http"
 	"strings"
-	"twst/internal/sdk/pkg/models/operations"
-	"twst/internal/sdk/pkg/models/sdkerrors"
-	"twst/internal/sdk/pkg/models/shared"
-	"twst/internal/sdk/pkg/utils"
 )
 
 type Order struct {

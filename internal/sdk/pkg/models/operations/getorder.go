@@ -3,8 +3,8 @@
 package operations
 
 import (
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
 	"net/http"
-	"twst/internal/sdk/pkg/models/shared"
 )
 
 type GetOrderRequest struct {

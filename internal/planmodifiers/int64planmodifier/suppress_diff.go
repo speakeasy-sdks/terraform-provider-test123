@@ -4,7 +4,7 @@ package int64planmodifier
 
 import (
 	"context"
-	"twst/internal/planmodifiers/utils"
+	"github.com/test/terraform-provider-twst/internal/planmodifiers/utils"
 
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 )

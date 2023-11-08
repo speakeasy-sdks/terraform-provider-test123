@@ -5,10 +5,10 @@ package sdk
 import (
 	"context"
 	"fmt"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/utils"
 	"net/http"
 	"time"
-	"twst/internal/sdk/pkg/models/shared"
-	"twst/internal/sdk/pkg/utils"
 )
 
 // ServerList contains the list of servers available to the SDK
@@ -142,9 +142,9 @@ func New(opts ...SDKOption) *Twst {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.1",
-			SDKVersion:        "0.3.0",
-			GenVersion:        "2.181.1",
-			UserAgent:         "speakeasy-sdk/go 0.3.0 2.181.1 0.0.1 twst",
+			SDKVersion:        "0.4.0",
+			GenVersion:        "2.183.0",
+			UserAgent:         "speakeasy-sdk/go 0.4.0 2.183.0 0.0.1 twst",
 		},
 	}
 	for _, opt := range opts {

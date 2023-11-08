@@ -5,15 +5,15 @@ package provider
 import (
 	"context"
 	"fmt"
-	"twst/internal/sdk"
+	"github.com/test/terraform-provider-twst/internal/sdk"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/operations"
 	"strconv"
-	"twst/internal/sdk/pkg/models/operations"
 )
 
 // Ensure provider defined types fully satisfy framework interfaces.

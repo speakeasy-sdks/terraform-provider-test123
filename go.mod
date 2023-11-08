@@ -1,4 +1,4 @@
-module twst
+module github.com/test/terraform-provider-twst
 
 go 1.18
 

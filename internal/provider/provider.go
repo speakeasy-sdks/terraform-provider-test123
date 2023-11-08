@@ -4,8 +4,8 @@ package provider
 
 import (
 	"context"
-	"twst/internal/sdk"
-	"twst/internal/sdk/pkg/models/shared"
+	"github.com/test/terraform-provider-twst/internal/sdk"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"

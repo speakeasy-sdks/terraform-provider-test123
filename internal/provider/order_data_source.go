@@ -5,8 +5,8 @@ package provider
 import (
 	"context"
 	"fmt"
-	"twst/internal/sdk"
-	"twst/internal/sdk/pkg/models/operations"
+	"github.com/test/terraform-provider-twst/internal/sdk"
+	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/operations"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"

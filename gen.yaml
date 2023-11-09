@@ -2,19 +2,19 @@ configVersion: 1.0.0
 management:
   docChecksum: 7b193330bf41e2c47ba62aa354c4a561
   docVersion: 0.0.1
-  speakeasyVersion: 1.115.0
-  generationVersion: 2.183.0
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: twst
   repoURL: https://github.com/speakeasy-sdks/terraform-provider-test123.git
 features:
   terraform:
-    core: 3.3.0
+    core: 3.3.1
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 terraform:
-  version: 0.4.0
+  version: 0.4.1
   author: test
   imports:
     option: openapi
@@ -24,6 +24,8 @@ terraform:
       operations: operations
       shared: shared
       webhooks: webhooks
+  inputModelSuffix: input
+  outputModelSuffix: output
   packageName: twst
   published: true
   repoSubDirectory: .

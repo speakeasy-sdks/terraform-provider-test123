@@ -6,7 +6,7 @@ generation:
   fixes:
     nameResolutionDec2023: false
 terraform:
-  version: 0.8.3
+  version: 0.8.4
   author: test
   imports:
     option: openapi

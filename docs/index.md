@@ -17,7 +17,7 @@ terraform {
   required_providers {
     twst = {
       source  = "test/twst"
-      version = "0.10.0"
+      version = "0.10.1"
     }
   }
 }

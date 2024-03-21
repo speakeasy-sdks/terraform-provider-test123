@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/test/terraform-provider-twst/internal/sdk"
-	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
+	"github.com/test/terraform-provider-twst/internal/sdk/models/shared"
 	"net/http"
 )
 

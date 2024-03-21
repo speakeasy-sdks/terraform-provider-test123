@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 	"github.com/test/terraform-provider-twst/internal/sdk"
-	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/operations"
+	"github.com/test/terraform-provider-twst/internal/sdk/models/operations"
 	"strconv"
 )
 

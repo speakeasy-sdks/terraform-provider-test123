@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/test/terraform-provider-twst/internal/sdk/pkg/models/shared"
+	"github.com/test/terraform-provider-twst/internal/sdk/models/shared"
 	"net/http"
 )
 

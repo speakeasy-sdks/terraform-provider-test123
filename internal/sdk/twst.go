@@ -144,8 +144,8 @@ func New(opts ...SDKOption) *Twst {
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.1",
 			SDKVersion:        "0.0.1",
-			GenVersion:        "2.286.4",
-			UserAgent:         "speakeasy-sdk/go 0.0.1 2.286.4 0.0.1 github.com/test/terraform-provider-twst/internal/sdk",
+			GenVersion:        "2.291.0",
+			UserAgent:         "speakeasy-sdk/go 0.0.1 2.291.0 0.0.1 github.com/test/terraform-provider-twst/internal/sdk",
 			Hooks:             hooks.New(),
 		},
 	}
